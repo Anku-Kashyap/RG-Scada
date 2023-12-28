@@ -9,7 +9,7 @@ import { useMyContext } from "../Context";
 
 
 function ZoneWiseKahrakmaf() {
-  const Base_Url="http://59.99.154.95:5984/"
+  const Base_Url=process.env.REACT_APP_BASE_URL
   const ZONE_1=useAPi(Base_Url+"zone/101")
   var [date,setDate] = useState(new Date());
   const { sharedValue } = useMyContext();
@@ -140,8 +140,8 @@ function useAPi(url) {
     const getReq=async()=>{
         const response = await axios.get(url,{
           auth: {
-          username: 'Admin',
-          password: 'War_ship_84'
+          username: process.env.REACT_APP_USERNAME,
+          password: process.env.REACT_APP_PASSWORD
         }
       })
         setData(response.data)

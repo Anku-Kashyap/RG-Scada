@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const MyContext = createContext();
 
@@ -11,9 +11,9 @@ const MyContextProvider = ({ children }) => {
 
   useEffect(() => {
     const logoutTimer = setTimeout(() => {
-        setSharedValue(false);
-        console.log("Setted false")
-    },10 * 1000); // 60 * 60* 1000 for 1 hour
+      setSharedValue(false);
+      console.log("Setted false");
+    }, 60 * 60 * 1000); // 60 * 60* 1000 for 1 hour
     return () => clearTimeout(logoutTimer);
   }, []);
 

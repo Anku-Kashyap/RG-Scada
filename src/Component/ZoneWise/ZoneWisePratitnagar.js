@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function ZoneWisePratitnagar() {
-  const Base_Url="http://59.99.154.95:5984/"
+  const Base_Url=process.env.REACT_APP_BASE_URL
   const ZONE_3=useAPi(Base_Url+"zone/103")
   var [date,setDate] = useState(new Date());
   
@@ -161,8 +161,8 @@ function useAPi(url) {
     const getReq=async()=>{
         const response = await axios.get(url,{
           auth: {
-          username: 'Admin',
-          password: 'War_Ship_84'
+          username: process.env.REACT_APP_USERNAME,
+          password: process.env.REACT_APP_PASSWORD
         }
       })
         setData(response.data)
