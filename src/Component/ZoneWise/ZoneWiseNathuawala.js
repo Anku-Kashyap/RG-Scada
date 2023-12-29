@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import JsonData from "../Data/ZoneWiseKahrakmaf.json";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useCheckWorkingURL } from "../../Utils/useCheckWorkingURL";
 
 function ZoneWiseNathuaWala() {
-  const Base_Url=process.env.REACT_APP_BASE_URL
+  const Base_Url=useCheckWorkingURL();
   const ZONE_2=useAPi(Base_Url+"zone/102")
   var [date,setDate] = useState(new Date());
   

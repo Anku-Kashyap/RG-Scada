@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import Save from "@mui/icons-material/Save";
 import FormatClear from "@mui/icons-material/FormatClear";
 import Cancel from "@mui/icons-material/Cancel";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
+import { useCheckWorkingURL } from "../../Utils/useCheckWorkingURL";
 
 import "./Instant.css";
 import { Link } from "react-router-dom";
@@ -189,7 +189,12 @@ function Instant() {
     setDivision(event.target.value);
     setStation("");
   };
-  const Base_Url = process.env.REACT_APP_BASE_URL;
+
+  const promise_res = useCheckWorkingURL();
+  const [Base_Url , setBase_Url] = useState("");
+  promise_res.then((promiseResult) => {
+    setBase_Url(promiseResult);
+  });
   const divisionOptions = ["KAHRAKMAFF", "PRATITNAGAR", "NATHUAWALA"];
   const stationOptions = division ? stationsByDivision[division] : [];
   const KAH_S1 = useAPi(Base_Url + "kah/101");
@@ -231,7 +236,6 @@ function Instant() {
   const CheckChange = () => {
     switch (true) {
       case division === "KAHRAKMAFF" && station === "1 - Office":
-        console.log("office");
         KAH_S1.getReq();
         DisplayData1(KAH_S1.APIdata);
 

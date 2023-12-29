@@ -8,43 +8,7 @@
     width: 0%;
     height: 150px;
     transform:scaleY(0.9);
-
-  /* width: 125%;
-  height: 120px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: fill;
-  object-fit: cover; */
 }
-
-/* 
-/* .main-area {
-    text-align: center;
-    width: 130%;
-    height: 1106px;
-    left: 0px;
-    background-color: #292C42;
-    right: 0px;
-    margin-top: 9px;
-  } */
-   */
-
-/* .logWise form label:first-child {
-    color: White;
-    font-size: Larger;
-    font-weight: bold;
-    border-style: none;
-    border-color: inherit;
-    border-width: inherit;
-    
-    left: px;
-    top: 0px;
-    width: 168px;
-    height: 36px;
-    padding: 5px;
-    
-} */
 
 #logwise-division{
     font-size: Larger;

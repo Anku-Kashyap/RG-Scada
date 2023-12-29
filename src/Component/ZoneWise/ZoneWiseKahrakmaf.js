@@ -5,11 +5,19 @@ import JsonData from "../Data/ZoneWiseKahrakmaf.json";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useMyContext } from "../Context";
+import { useCheckWorkingURL } from "../../Utils/useCheckWorkingURL";
 
 
 
 function ZoneWiseKahrakmaf() {
-  const Base_Url=process.env.REACT_APP_BASE_URL
+  
+
+  const promise_res = useCheckWorkingURL();
+  const [Base_Url, setBase_Url] = useState("");
+  promise_res.then((promiseResult) => {
+    setBase_Url(promiseResult);
+  });
+  
   const ZONE_1=useAPi(Base_Url+"zone/101")
   var [date,setDate] = useState(new Date());
   const { sharedValue } = useMyContext();

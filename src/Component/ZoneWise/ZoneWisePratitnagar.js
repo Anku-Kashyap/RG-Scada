@@ -2,9 +2,15 @@ import "./ZoneWise_Par.css";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useCheckWorkingURL } from "../../Utils/useCheckWorkingURL";
 
 function ZoneWisePratitnagar() {
-  const Base_Url=process.env.REACT_APP_BASE_URL
+  const promise_res = useCheckWorkingURL();
+  const [Base_Url, setBase_Url] = useState("");
+  promise_res.then((promiseResult) => {
+    setBase_Url(promiseResult);
+  });
+  
   const ZONE_3=useAPi(Base_Url+"zone/103")
   var [date,setDate] = useState(new Date());
   
