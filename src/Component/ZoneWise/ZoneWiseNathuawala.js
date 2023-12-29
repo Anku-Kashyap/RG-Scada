@@ -7,7 +7,12 @@ import axios from "axios";
 import { useCheckWorkingURL } from "../../Utils/useCheckWorkingURL";
 
 function ZoneWiseNathuaWala() {
-  const Base_Url=useCheckWorkingURL();
+  const promise_res = useCheckWorkingURL();
+  const [Base_Url, setBase_Url] = useState("");
+  promise_res.then((promiseResult) => {
+    setBase_Url(promiseResult);
+  });  
+  
   const ZONE_2=useAPi(Base_Url+"zone/102")
   var [date,setDate] = useState(new Date());
   

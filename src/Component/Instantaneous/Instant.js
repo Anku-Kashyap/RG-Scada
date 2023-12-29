@@ -6,9 +6,9 @@ import Save from "@mui/icons-material/Save";
 import FormatClear from "@mui/icons-material/FormatClear";
 import Cancel from "@mui/icons-material/Cancel";
 import { useCheckWorkingURL } from "../../Utils/useCheckWorkingURL";
-
 import "./Instant.css";
 import { Link } from "react-router-dom";
+import logo from "../../images/sheetal-enterprises-logo.png";
 
 import {
   Box,
@@ -191,7 +191,7 @@ function Instant() {
   };
 
   const promise_res = useCheckWorkingURL();
-  const [Base_Url , setBase_Url] = useState("");
+  const [Base_Url, setBase_Url] = useState("");
   promise_res.then((promiseResult) => {
     setBase_Url(promiseResult);
   });
@@ -341,217 +341,222 @@ function Instant() {
 
   return (
     <>
-      <div className="Instant-header">
-        <div className="Instant-main-area">
-          <div className="Instant-dropdown-area">
-            <div className="Instant-division">
-              <label for="division">Division :-</label>
-              <select value={division} onChange={handleDivisionChange}>
-                <option value="">Select Division</option>
-                {divisionOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="instant-station">
-              <label for="station">Station Name :-</label>
-              <select
-                value={station}
-                onChange={(event) => setStation(event.target.value)}
-              >
-                <option value="">Select Station</option>
-                {stationOptions.map((option) => (
-                  <option key={option} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div className="last-update">
-              <span>Last Updated :-{allValues.tag34}</span>
-              <span>Date :- {allValues.tag33}</span>
-            </div>
+      <div className="Instant">
+        <div className="Instant-header">
+          <div className="Instant-content">
+            <img src={logo} className="Instant-logo" alt="logo" />
+            <p className="instant-header-text">
+              SUPERVISORY CONTROL AND DATA ACQUISITION SYSTEM PERI URBAN UTTARAKAND 
+            </p>
           </div>
-          <div className="instant-area">
-            <div className="electrical-data">
-              <table id="electrical">
-                <caption>Electrical Data</caption>
-                <tr>
-                  <td>Voltage (R-Y)</td>
-                  <td>{allValues.tag0}</td>
-                </tr>
-                <tr>
-                  <td>Voltage (Y-B)</td>
-                  <td>{allValues.tag1}</td>
-                </tr>
-                <tr>
-                  <td>Voltage (B-R)</td>
-                  <td>{allValues.tag2}</td>
-                </tr>
-                <tr>
-                  <td>Current (R-Phase)</td>
-                  <td>{allValues.tag3}</td>
-                </tr>
-                <tr>
-                  <td>Current (Y-Phase)</td>
-                  <td>{allValues.tag4}</td>
-                </tr>
-                <tr>
-                  <td>Current (B-Phase)</td>
-                  <td>{allValues.tag5}</td>
-                </tr>
-                <tr>
-                  <td>Frequency</td>
-                  <td>{allValues.tag6}</td>
-                </tr>
-                <tr>
-                  <td>Power Factor</td>
-                  <td>{allValues.tag7}</td>
-                </tr>
-                <tr>
-                  <td>Power (K.W.)</td>
-                  <td>{allValues.tag8}</td>
-                </tr>
-                <tr>
-                  <td>Energy (Kwh)</td>
-                  <td>{allValues.tag9}</td>
-                </tr>
-              </table>
-            </div>
-            <div className="Tubewell-status">
-              <table id="electrical">
-                <caption>TubeWell Status</caption>
-                <tr>
-                  <td>Operating Mode</td>
-                  <td>{allValues.tag10}</td>
-                </tr>
-                <tr>
-                  <td>Power on Hours</td>
-                  <td>{allValues.tag11}</td>
-                </tr>
-                <tr>
-                  <td>Pump Status</td>
-                  <td>{allValues.tag12}</td>
-                </tr>
-                <tr>
-                  <td>Pump Run Hours</td>
-                  <td>{allValues.tag13}</td>
-                </tr>
-              </table>
-            </div>
-            <div className="TW">
-              <table id="electrical">
-                <caption>TW Operating Parameter's</caption>
-                <tr>
-                  <td>Maximum voltage</td>
-                  <td>{allValues.tag14}</td>
-                </tr>
-                <tr>
-                  <td>Minimum voltage</td>
-                  <td>{allValues.tag15}</td>
-                </tr>
-                <tr>
-                  <td>Maximum current</td>
-                  <td>{allValues.tag16}</td>
-                </tr>
-                <tr>
-                  <td>Minimum current</td>
-                  <td>{allValues.tag17}</td>
-                </tr>
-                <tr>
-                  <td>Unbalance in currenT</td>
-                  <td>{allValues.tag18}</td>
-                </tr>
-              </table>
-            </div>
-            <div className="Schedule">
-              <table id="Schedule">
-                <caption>Tubewell Operating Schedule</caption>
-                <tr>
-                  <td>1st On Time</td>
-                  <td>{allValues.tag19}</td>
-                  <td>1st Off Time</td>
-                  <td>{allValues.tag20}</td>
-                </tr>
-                <tr>
-                  <td>2nd On Time</td>
-                  <td>{allValues.tag21}</td>
-                  <td>2nd Off Time</td>
-                  <td>{allValues.tag22}</td>
-                </tr>
-                <tr>
-                  <td>3rd On Time</td>
-                  <td>{allValues.tag23}</td>
-                  <td>3rd Off Time</td>
-                  <td>{allValues.tag24}</td>
-                </tr>
-              </table>
-            </div>
-            <div className="Process">
-              <table id="Process">
-                <caption>Process Data</caption>
-                <tr>
-                  <td>Pump Discharge (m3/h)</td>
-                  <td>{allValues.tag25}</td>
-                  <td>Pump Total Discharge Today (m3)</td>
-                  <td>{allValues.tag26}</td>
-                </tr>
-                <tr>
-                  <td>Tank Discharge (m3/h)</td>
-                  <td>{allValues.tag27}</td>
-                  <td>Tank Total Discharge Today (m3)</td>
-                  <td>{allValues.tag28}</td>
-                </tr>
-              </table>
-            </div>
-            <div className="Event">
-              <table id="Event">
-                <tr>
-                  <td>Event/Fault Window</td>
-                  <td>{allValues.tag29}</td>
-                </tr>
-              </table>
-            </div>
-            <span className="instant-data-point1">
-              {" "}
-              {allValues.tag30} kg/cm2
-            </span>
-            <span className="instant-data-point2"> {allValues.tag31} m3/h</span>
-            <span className="instant-data-point3">{allValues.tag32} m</span>
-            <span className="instant-data-point4"> {allValues.tag35} m</span>
-            <span className="instant-data-point5"> {allValues.tag25} m3/h</span>
-          </div>
-          <div className="instant-btn-group">
-            <Link to="/">
-              <button>Instantaneous at a glance</button>
-            </Link>
-            <Link to="/first">
-              <button>Zone wise pressure</button>viu
-            </Link>
-            <button onClick={handleClick}>Logbook</button>
-            <Button onClick={() => SetPutModalOpen(true)}>Pump Setting</Button>
-          </div>
-          <CreateNewAccountModal
-            cpump={CurrentPump}
-            open={createModalOpen}
-            onClose={() => setCreateModalOpen(false)}
-          />
         </div>
-        <div></div>
-        <FormModal
-          open={PutModalOpen}
-          onClose={() => SetPutModalOpen(false)}
-          initialvalues={initVal}
-          division={division}
-          station={station}
-          pump_id={CurrentPump}
-          title="TW PARAMETER"
-          btnSubmitTxt={"SAVE"}
-          Base_Url={Base_Url}
+      </div>
+      <div className="Instant-main-area">
+        <div className="Instant-dropdown-area">
+          <div className="Instant-division">
+            <label for="division">Division :-</label>
+            <select value={division} onChange={handleDivisionChange}>
+              <option value="">Select Division</option>
+              {divisionOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="instant-station">
+            <label for="station">Station Name :-</label>
+            <select
+              value={station}
+              onChange={(event) => setStation(event.target.value)}
+            >
+              <option value="">Select Station</option>
+              {stationOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="last-update">
+            <span>Last Updated :-{allValues.tag34}</span>
+            <span>Date :- {allValues.tag33}</span>
+          </div>
+        </div>
+        <div className="instant-area">
+          <div className="electrical-data">
+            <table id="electrical">
+              <caption>Electrical Data</caption>
+              <tr>
+                <td>Voltage (R-Y)</td>
+                <td>{allValues.tag0}</td>
+              </tr>
+              <tr>
+                <td>Voltage (Y-B)</td>
+                <td>{allValues.tag1}</td>
+              </tr>
+              <tr>
+                <td>Voltage (B-R)</td>
+                <td>{allValues.tag2}</td>
+              </tr>
+              <tr>
+                <td>Current (R-Phase)</td>
+                <td>{allValues.tag3}</td>
+              </tr>
+              <tr>
+                <td>Current (Y-Phase)</td>
+                <td>{allValues.tag4}</td>
+              </tr>
+              <tr>
+                <td>Current (B-Phase)</td>
+                <td>{allValues.tag5}</td>
+              </tr>
+              <tr>
+                <td>Frequency</td>
+                <td>{allValues.tag6}</td>
+              </tr>
+              <tr>
+                <td>Power Factor</td>
+                <td>{allValues.tag7}</td>
+              </tr>
+              <tr>
+                <td>Power (K.W.)</td>
+                <td>{allValues.tag8}</td>
+              </tr>
+              <tr>
+                <td>Energy (Kwh)</td>
+                <td>{allValues.tag9}</td>
+              </tr>
+            </table>
+          </div>
+          <div className="Tubewell-status">
+            <table id="electrical">
+              <caption>TubeWell Status</caption>
+              <tr>
+                <td>Operating Mode</td>
+                <td>{allValues.tag10}</td>
+              </tr>
+              <tr>
+                <td>Power on Hours</td>
+                <td>{allValues.tag11}</td>
+              </tr>
+              <tr>
+                <td>Pump Status</td>
+                <td>{allValues.tag12}</td>
+              </tr>
+              <tr>
+                <td>Pump Run Hours</td>
+                <td>{allValues.tag13}</td>
+              </tr>
+            </table>
+          </div>
+          <div className="TW">
+            <table id="electrical">
+              <caption>TW Operating Parameter's</caption>
+              <tr>
+                <td>Maximum voltage</td>
+                <td>{allValues.tag14}</td>
+              </tr>
+              <tr>
+                <td>Minimum voltage</td>
+                <td>{allValues.tag15}</td>
+              </tr>
+              <tr>
+                <td>Maximum current</td>
+                <td>{allValues.tag16}</td>
+              </tr>
+              <tr>
+                <td>Minimum current</td>
+                <td>{allValues.tag17}</td>
+              </tr>
+              <tr>
+                <td>Unbalance in currenT</td>
+                <td>{allValues.tag18}</td>
+              </tr>
+            </table>
+          </div>
+          <div className="Schedule">
+            <table id="Schedule">
+              <caption>Tubewell Operating Schedule</caption>
+              <tr>
+                <td>1st On Time</td>
+                <td>{allValues.tag19}</td>
+                <td>1st Off Time</td>
+                <td>{allValues.tag20}</td>
+              </tr>
+              <tr>
+                <td>2nd On Time</td>
+                <td>{allValues.tag21}</td>
+                <td>2nd Off Time</td>
+                <td>{allValues.tag22}</td>
+              </tr>
+              <tr>
+                <td>3rd On Time</td>
+                <td>{allValues.tag23}</td>
+                <td>3rd Off Time</td>
+                <td>{allValues.tag24}</td>
+              </tr>
+            </table>
+          </div>
+          <div className="Process">
+            <table id="Process">
+              <caption>Process Data</caption>
+              <tr>
+                <td>Pump Discharge (m3/h)</td>
+                <td>{allValues.tag25}</td>
+                <td>Pump Total Discharge Today (m3)</td>
+                <td>{allValues.tag26}</td>
+              </tr>
+              <tr>
+                <td>Tank Discharge (m3/h)</td>
+                <td>{allValues.tag27}</td>
+                <td>Tank Total Discharge Today (m3)</td>
+                <td>{allValues.tag28}</td>
+              </tr>
+            </table>
+          </div>
+          <div className="Event">
+            <table id="Event">
+              <tr>
+                <td>Event/Fault Window</td>
+                <td>{allValues.tag29}</td>
+              </tr>
+            </table>
+          </div>
+          <span className="instant-data-point1"> {allValues.tag30} kg/cm2</span>
+          <span className="instant-data-point2"> {allValues.tag31} m3/h</span>
+          <span className="instant-data-point3">{allValues.tag32} m</span>
+          <span className="instant-data-point4"> {allValues.tag35} m</span>
+          <span className="instant-data-point5"> {allValues.tag25} m3/h</span>
+        </div>
+        <div className="instant-btn-group">
+          <Link to="/">
+            <button>Instantaneous at a glance</button>
+          </Link>
+          <Link to="/first">
+            <button>Zone wise pressure</button>
+          </Link>
+          <button onClick={handleClick}>Logbook</button>
+          <Button onClick={() => SetPutModalOpen(true)}>Pump Setting</Button>
+        </div>
+        <CreateNewAccountModal
+          cpump={CurrentPump}
+          open={createModalOpen}
+          onClose={() => setCreateModalOpen(false)}
         />
       </div>
+      <div></div>
+      <FormModal
+        open={PutModalOpen}
+        onClose={() => SetPutModalOpen(false)}
+        initialvalues={initVal}
+        division={division}
+        station={station}
+        pump_id={CurrentPump}
+        title="TW PARAMETER"
+        btnSubmitTxt={"SAVE"}
+        Base_Url={Base_Url}
+      />
       <div className="instant-Footer">
         <p className="instant-Footer-text">
           Design And Devlop By - Shetal Enterprises 18 Cross 2B Tapovan Enclave

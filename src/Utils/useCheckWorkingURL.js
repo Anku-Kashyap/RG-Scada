@@ -13,7 +13,6 @@ export const useCheckWorkingURL = async () => {
     try {
       const response = await fetch(url, { method: "HEAD" });
       if (response.ok) {
-        console.log(url);
         setWorkingURL(url);
         return url;
       }

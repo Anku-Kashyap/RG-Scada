@@ -1,61 +1,77 @@
-.Instant-header {
-  background-image: url(/src/images/HP2.jpg);
-  background-repeat: repeat-y;
-  background-size: 60%;
-  position: relative;
-  top: -100px;
-  left: -90px;
-  width: 130%;
-  height: 150px;
-  transform: scale(0.9);
+.Instant{
+  text-align: center;
 }
 
+.Instant-header {
+  background-color: #292c42;
+  color: white;
+  text-align: centre;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  position: top;
+}
 
+.instant-header-text{
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-left: 10px;
+}
+
+ .Instant-content {
+  display: flex;
+  align-items: center;
+  margin-top: 1px;
+ }
+
+
+.Instant-logo {
+  height: 100px;
+  width: 100px;
+  pointer-events: none;
+}
 
 .Instant-dropdown-area {
-  margin-top:100px;
-
+  margin-top: 100px;
 }
 
 .Instant-dropdown-area label {
-    color: White;
-    font-size: Larger;
-    font-weight: bold;
-    border-style: none;
-    border-color: inherit;
-    border-width: inherit;
-    position: absolute;
-    left: 4px;
-    top: 150px;
-    width: 168px;
-    height: 32px;
-    padding: 5px;
-    
-}
-
-.Instant-dropdown-area select{
+  color: White;
   font-size: Larger;
-    border-style: solid;
-    border-color: inherit;
-    border-width: inherit;
-    position: absolute;
-    top: 160px;
-    left: 147px;
-    width: 342px;
-    height: 32px;
-    margin-left: 50px;
-    
-
+  font-weight: bold;
+  border-style: none;
+  border-color: inherit;
+  border-width: inherit;
+  position: absolute;
+  left: 4px;
+  top: 150px;
+  width: 168px;
+  height: 32px;
+  padding: 5px;
 }
 
-.instant-station label{
+.Instant-dropdown-area select {
+  font-size: Larger;
+  border-style: solid;
+  border-color: inherit;
+  border-width: inherit;
+  position: absolute;
+  top: 160px;
+  left: 147px;
+  width: 342px;
+  height: 32px;
+  margin-left: 50px;
+}
+
+.instant-station label {
   margin-left: 700px;
-
 }
 
-.instant-station select{
+.instant-station select {
   margin-left: 750px;
-
 }
 
 /* .last-update {
@@ -68,28 +84,27 @@
 
 } */
 
-
-.last-update span:first-child{
-    margin-left: 1100px;
-    color: White;
-    background-color: #666699;
-    font-family: Arial;
-    font-size: Larger;
-    font-weight: bold;
-    border-style: none;
-    border-color: inherit;
-    border-width: inherit;
-    position: absolute;
-    top: 165px;
-    left: 156px;
-    width: 343px;
-    height: 30px;
-    text-align: center;
-    right: 9px;
-    overflow: visible;
+.last-update span:first-child {
+  margin-left: 1100px;
+  color: White;
+  background-color: #666699;
+  font-family: Arial;
+  font-size: Larger;
+  font-weight: bold;
+  border-style: none;
+  border-color: inherit;
+  border-width: inherit;
+  position: absolute;
+  top: 165px;
+  left: 156px;
+  width: 343px;
+  height: 30px;
+  text-align: center;
+  right: 9px;
+  overflow: visible;
 }
 
-.last-update span:last-child{
+.last-update span:last-child {
   margin-left: 1100px;
   color: White;
   background-color: #666699;
@@ -120,25 +135,25 @@
   height: 660px;
 }
 
-.electrical-data{
+.electrical-data {
   margin-left: -23%;
 }
 
-.electrical-data caption{
-    color: Black;
-    background-color: White;
-    font-size: Larger;
-    font-weight: bold;
-    text-decoration: underline;
-    border-style: none;
-    border-color: inherit;
-    border-width: inherit;
-    position: absolute;
-    top: -32px;
-    left: -23%;
-    width: 370px;
-    height: 29px;
-    text-align: center
+.electrical-data caption {
+  color: Black;
+  background-color: White;
+  font-size: Larger;
+  font-weight: bold;
+  text-decoration: underline;
+  border-style: none;
+  border-color: inherit;
+  border-width: inherit;
+  position: absolute;
+  top: -32px;
+  left: -23%;
+  width: 370px;
+  height: 29px;
+  text-align: center;
 }
 
 #electrical {
@@ -146,41 +161,38 @@
   border-collapse: collapse;
   width: 19%;
   background-color: #666699;
-
 }
 
-#electrical td:last-child{
-    padding: 8px;
-    color: White;
-    background-color: #0f0f0f;
-    font-size: Larger;
-    font-weight: bold;
-    border-style: none;
-    border-color: inherit;
-    border-width: inherit;
-    top: 40px;
-    left: 240px;
-    width: 115px;
-    height: 26px;
-    text-align: center
+#electrical td:last-child {
+  padding: 8px;
+  color: White;
+  background-color: #0f0f0f;
+  font-size: Larger;
+  font-weight: bold;
+  border-style: none;
+  border-color: inherit;
+  border-width: inherit;
+  top: 40px;
+  left: 240px;
+  width: 115px;
+  height: 26px;
+  text-align: center;
 }
-
-
 
 #electrical th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #04aa6d;
   color: white;
 }
 
-.Tubewell-status{
-  margin-left:100px;
-  margin-top:-26%;
+.Tubewell-status {
+  margin-left: 100px;
+  margin-top: -26%;
 }
 
-.Tubewell-status caption{
+.Tubewell-status caption {
   color: Black;
   background-color: White;
   font-size: Larger;
@@ -194,16 +206,15 @@
   left: 100px;
   width: 285px;
   height: 29px;
-  text-align: center
+  text-align: center;
 }
-
 
 .TW {
-  margin-left:-370px;
-  margin-top:19%;
+  margin-left: -370px;
+  margin-top: 19%;
 }
 
-.TW caption{
+.TW caption {
   color: Black;
   background-color: White;
   font-size: Larger;
@@ -217,22 +228,22 @@
   left: -370px;
   width: 375px;
   height: 29px;
-  text-align: center
+  text-align: center;
 }
 
-.Schedule{
-  margin-left:60%;
-  margin-top:-43%;
+.Schedule {
+  margin-left: 60%;
+  margin-top: -43%;
 }
 
-#Schedule{
+#Schedule {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 90%;
   background-color: #666699;
 }
 
-#Schedule td:nth-child(even){
+#Schedule td:nth-child(even) {
   padding: 8px;
   color: White;
   background-color: #151515;
@@ -245,10 +256,10 @@
   left: 240px;
   width: 115px;
   height: 26px;
-  text-align: center
+  text-align: center;
 }
 
-.Schedule caption{
+.Schedule caption {
   color: Black;
   background-color: White;
   font-size: Larger;
@@ -259,25 +270,25 @@
   border-width: inherit;
   position: absolute;
   top: -4%;
-  left: 60%;;
+  left: 60%;
   width: 575px;
   height: 29px;
-  text-align: center
+  text-align: center;
 }
 
-.Process{
-  margin-left:27%;
+.Process {
+  margin-left: 27%;
   margin-top: 15%;
 }
 
-#Process{
+#Process {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 90%;
   background-color: #666699;
 }
 
-#Process td:nth-child(even){
+#Process td:nth-child(even) {
   padding: 8px;
   color: White;
   background-color: #080808;
@@ -290,10 +301,10 @@
   left: 240px;
   width: 100px;
   height: 26px;
-  text-align: center
+  text-align: center;
 }
 
-.Process caption{
+.Process caption {
   color: Black;
   background-color: White;
   font-size: Larger;
@@ -304,62 +315,62 @@
   border-width: inherit;
   position: absolute;
   top: 52%;
-  left: 27%;;
+  left: 27%;
   width: 1050px;
   height: 29px;
-  text-align: center
+  text-align: center;
 }
 
 #Event {
-  margin-left:27%;
-  margin-top: 2%
+  margin-left: 27%;
+  margin-top: 2%;
 }
 
-#Event td:first-child{
-    color: Black;
-    background-color: White;
-    font-size: XX-Large;
-    font-weight: bold;
-    text-decoration: underline;
-    border-style: none;
-    border-color: inherit;
-    border-width: inherit;
-    position: relative;
-    top: 5px;
-    left: 5px;
-    width: 371px;
-    height: 56px;
-    text-align: center;
+#Event td:first-child {
+  color: Black;
+  background-color: White;
+  font-size: XX-Large;
+  font-weight: bold;
+  text-decoration: underline;
+  border-style: none;
+  border-color: inherit;
+  border-width: inherit;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  width: 371px;
+  height: 56px;
+  text-align: center;
 }
 
-#Event td:last-child{
-    color: Black;
-    background-color:black;
-    font-size: XX-Large;
-    border-style: none;
-    border-color: inherit;
-    border-width: inherit;
-    position: relative;
-    top: 6px;
-    left: 5px;
-    width: 600px;
-    height: 60px;
-    text-align: left;
+#Event td:last-child {
+  color: Black;
+  background-color: black;
+  font-size: XX-Large;
+  border-style: none;
+  border-color: inherit;
+  border-width: inherit;
+  position: relative;
+  top: 6px;
+  left: 5px;
+  width: 600px;
+  height: 60px;
+  text-align: left;
 }
 
-.instant-data-point1{
-    color: White;
-    background-color: Black;
-    font-size: Larger;
-    font-weight: normal;
-    border-style: none;
-    border-color: inherit;
-    border-width: inherit;
-    position: absolute;
-    top: 135px;
-    left: 420px;
-    width: 130px;
-    height: 30px
+.instant-data-point1 {
+  color: White;
+  background-color: Black;
+  font-size: Larger;
+  font-weight: normal;
+  border-style: none;
+  border-color: inherit;
+  border-width: inherit;
+  position: absolute;
+  top: 135px;
+  left: 420px;
+  width: 130px;
+  height: 30px;
 }
 
 .instant-data-point2 {
@@ -374,7 +385,7 @@
   top: 295px;
   left: 30px;
   width: 135px;
-  height: 30px
+  height: 30px;
 }
 
 .instant-data-point3 {
@@ -390,7 +401,7 @@
   left: 770px;
   width: 85px;
   height: 28px;
-  bottom: 233px
+  bottom: 233px;
 }
 
 .instant-data-point4 {
@@ -406,7 +417,7 @@
   left: 270px;
   width: 95px;
   height: 28px;
-  bottom: 233px
+  bottom: 233px;
 }
 
 .instant-data-point5 {
@@ -421,22 +432,22 @@
   top: 235px;
   left: 920px;
   width: 135px;
-  height: 30px
+  height: 30px;
 }
 
 .instant-btn-group button {
   background-color: green;
-  border: solid 1px  #292C42;
+  border: solid 1px #292c42;
   font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
   color: white;
-  padding: 10px 24px;
+  padding: 10px 10px;
   cursor: pointer;
   float: left;
   margin-left: 20px;
-  margin-top: 1000px;
-  width: 15%;
+  margin-top: 1050px;
+  width: 12%;
 }
 
 /* Clear floats (clearfix hack) */
@@ -457,11 +468,12 @@
 }
 
 .instant-Footer {
-  background-color: #292C42;
+  background-color: #292c42;
   color: white;
   text-align: center;
+  margin-top: 10px;
   padding: 20px;
-  position: absolute;
+  position: bottom;
   bottom: 0;
   width: 100%;
   height: 30px;
@@ -479,7 +491,7 @@
 }
 
 .Zone-Footer {
-  background-color: #292C42;
+  background-color: #292c42;
   color: white;
   text-align: center;
   padding: 20px;
@@ -501,7 +513,7 @@
 }
 
 .Zone_Pra-Footer {
-  background-color: #292C42;
+  background-color: #292c42;
   color: white;
   text-align: center;
   padding: 20px;
@@ -512,7 +524,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .Zone_Pra-Footer-text {
@@ -524,7 +535,7 @@
 }
 
 .Zone_Nat-Footer {
-  background-color: #292C42;
+  background-color: #292c42;
   color: white;
   text-align: center;
   padding: 20px;
@@ -535,7 +546,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .Zone_Nat-Footer-text {
