@@ -33,8 +33,6 @@ function Login({ setChildState }) {
       updateSharedValue(true);
       setChildState(true);
     } else {
-      console.log(input,password);
-      console.log(process.env.REACT_APP_LOGIN_USERNAME)
       setPasswordError("Invalid Account OR Password.");
       openModal();
     }
