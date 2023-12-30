@@ -1,7 +1,6 @@
 
 import "./ZoneWise_Kah.css";
 import { Link } from "react-router-dom";
-import JsonData from "../Data/ZoneWiseKahrakmaf.json";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useMyContext } from "../Context";
@@ -83,7 +82,7 @@ function ZoneWiseKahrakmaf() {
   
 
   return (
-    <div className="header">
+    <div className="">
       <div className="zone1-wise-area">
         <span className="data1-point1">{allValues.tag0} m</span>
         <span className="data1-point2">{allValues.tag1} kg/cm2</span>

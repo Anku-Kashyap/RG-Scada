@@ -12,12 +12,25 @@ import Login from "./Component/Login/Login";
 import { MyContextProvider, useMyContext } from "./Component/Context";
 
 function App() {
-  const [log, setLog] = useState(false);
+  const [appLog, setAppLog] = useState(false);
+
+  const handleSetChildState = (newValue) => {
+    setAppLog(newValue);
+  };
 
   return (
     <MyContextProvider>
       <Routes>
-        <Route path="/" element={log ? <HomePage /> : <Login />} />
+        <Route
+          path="/"
+          element={
+            appLog ? (
+              <HomePage />
+            ) : (
+              <Login setChildState={handleSetChildState} />
+            )
+          }
+        />
         <Route path="/first" element={<FirstPage />} />
         <Route path="/pratitnagar" element={<Pratitnagar />} />
         <Route path="/nathuawala" element={<NathuaWala />} />

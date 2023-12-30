@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import HomePage from "../../Pages/HomePage";
 import Modal from "react-modal";
 import "./login.css";
 import { useMyContext } from "../Context";
 
-function Login(props) {
+function Login({ setChildState }) {
   const [input, setInput] = useState("");
   const [password, setPassword] = useState("");
   const [log, setLog] = useState(false);
@@ -17,19 +17,24 @@ function Login(props) {
       width: "400px",
       margin: "auto",
       maxHeight: "20vh",
-      color: "#090979",
-      fontSize: "16px",
-      border: "2px solid #3498db",
+      color: "#ff0000",
+      fontSize: "20px",
+      border: "4px solid #0d0d0d",
       borderRadius: "8px",
     },
   };
 
   const handleSubmit = () => {
-    if (input === "Scada" && password === "admin123") {
+    if (
+      input === process.env.REACT_APP_LOGIN_USERNAME &&
+      password === process.env.REACT_APP_LOGIN_PASSWORD
+    ) {
       setLog(true);
       updateSharedValue(true);
-      // props.setLog(true);
+      setChildState(true);
     } else {
+      console.log(input,password);
+      console.log(process.env.REACT_APP_LOGIN_USERNAME)
       setPasswordError("Invalid Account OR Password.");
       openModal();
     }
@@ -92,3 +97,4 @@ function Login(props) {
 }
 
 export default Login;
+

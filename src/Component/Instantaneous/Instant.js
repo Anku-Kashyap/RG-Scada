@@ -341,7 +341,7 @@ function Instant() {
 
   return (
     <>
-      <div className="Instant">
+      {/* <div className="Instant">
         <div className="Instant-header">
           <div className="Instant-content">
             <img src={logo} className="Instant-logo" alt="logo" />
@@ -350,7 +350,7 @@ function Instant() {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="Instant-main-area">
         <div className="Instant-dropdown-area">
           <div className="Instant-division">

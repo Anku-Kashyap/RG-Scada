@@ -1,7 +1,6 @@
 
 import "./ZoneWise_Nat.css";
 import { Link } from "react-router-dom";
-import JsonData from "../Data/ZoneWiseKahrakmaf.json";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useCheckWorkingURL } from "../../Utils/useCheckWorkingURL";
